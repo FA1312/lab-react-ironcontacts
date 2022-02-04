@@ -37,4 +37,72 @@
   }
 }
 
+.top{
+  text-align: center;
+}
+
+.top button {
+  margin-right: 3rem;
+  border-radius:20px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.table {
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+  background: rgb(231 231 231 / 20%);
+}
+
+.table img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+  padding: 2rem;
+}
+
+.sort-popularity {
+  background-color: #64a557;
+}
+.sort-name {
+  background-color: #a5a057;
+}
+
+.delete-btn {
+  background-color: rgb(233 41 7 / 88%);
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.btn {
+  font-family: 'Work Sans', sans-serif;
+  margin: 10px;
+  align-self: center;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-size: .7rem;
+  color: #fff;
+}
+
+.table-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+td {
+  text-align: center;
+  font-size: larger;
+  font-weight: 600;
+  height: 10rem;
+  letter-spacing: 0.1rem;
+  padding: 3rem;
+}
 

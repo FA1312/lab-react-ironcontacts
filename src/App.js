@@ -34,52 +34,56 @@ function App() {
   };
 
   return (
-    <div className="list">
-      <h2>IronContacts</h2>
-      <button className="add-random" onClick={addContact}>
-        Add Random Contact
-      </button>
-      <button className="sort-popularity" onClick={sortPop}>
-        Sort by popularity
-      </button>
-      <button className="sort-name" onClick={sortName}>
-        Sort by name
-      </button>
-      <table>
-        <thead>
-          <tr>
-            <th>Picture</th>
-            <th>Name</th>
-            <th>Popularity</th>
-            <th>Action</th>
-            <th>Won Oscar</th>
-            <th>Won Emmy</th>
-          </tr>
-        </thead>
-        {contacts.map((contact) => {
-          return (
-            <tbody key={contact.id}>
-              <tr>
-                <td>
-                  <img src={contact.pictureUrl} alt={contact.name} />
-                </td>
-                <td>{contact.name}</td>
-                <td>{contact.popularity.toFixed(2)}</td>
-                <td>
-                  <button
-                    className="delete-btn"
-                    onClick={() => deleteContact(contact.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-                <td>{contact.wonOscar && <p>🏆</p>}</td>
-                <td>{contact.wonEmmy && <p>🏆</p>}</td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </table>
+    <div className="container">
+      <div className="top">
+        <h2>IronContacts</h2>
+        <button className="add-random" onClick={addContact}>
+          Add Random Contact
+        </button>
+        <button className="sort-popularity" onClick={sortPop}>
+          Sort by popularity
+        </button>
+        <button className="sort-name" onClick={sortName}>
+          Sort by name
+        </button>
+      </div>
+      <div className="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>Popularity</th>
+              <th>Action</th>
+              <th>Won Oscar</th>
+              <th>Won Emmy</th>
+            </tr>
+          </thead>
+          {contacts.map((contact) => {
+            return (
+              <tbody key={contact.id}>
+                <tr>
+                  <td>
+                    <img src={contact.pictureUrl} alt={contact.name} />
+                  </td>
+                  <td className="name">{contact.name}</td>
+                  <td>{contact.popularity.toFixed(2)}</td>
+                  <td>
+                    <button
+                      className="delete-btn"
+                      onClick={() => deleteContact(contact.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                  <td>{contact.wonOscar && <p>🏆</p>}</td>
+                  <td>{contact.wonEmmy && <p>🏆</p>}</td>
+                </tr>
+              </tbody>
+            );
+          })}
+        </table>
+      </div>
     </div>
   );
 }
